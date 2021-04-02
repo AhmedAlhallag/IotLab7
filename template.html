@@ -1,1 +1,41 @@
+<style>
+table {
+text-align: center;
+margin: 0 auto;
+}
 
+tbody td{
+  padding: 15px;
+  background-color: rgb(230, 254, 255)
+}
+thead th{
+  padding: 15px;
+  background-color: rgb(69, 69, 69);
+  color:#fff;
+  border: rgb(36, 149, 255)
+}
+</style>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Light Reading</th>
+                <th>Created At</th>
+                <th>Sensor Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {{msg.payload[0].id}} </td>
+                <td> {{msg.payload[0].light_reading}} </td>
+                <td> {{msg.payload[0].created_at}}  </td>
+                <td> {{msg.payload[0].sensor_name}}  </td>
+            </tr>
+        </tbody>
+        
+        
+        
+    </table>
+</div>

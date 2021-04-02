@@ -1,8 +1,8 @@
 # Iot Lab 7: MySQL, PHPMyAdmin, Apache w/ Node-RED on Ubuntu 20.4 AWS
 
-Installation Instructions:
+# Installation Instructions:
 
-# Installing Apache server
+### Installing Apache server
 ```
 sudo lsof -i -P -n | grep LISTEN
 

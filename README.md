@@ -42,7 +42,7 @@ echo "My first php website!";
 - Apache should host any php file inside that directory, Try to access that page via  x.x.x.x/index.php
 
 ### Installing phpMyAdmin web application
-
+```
 sudo apt-get install phpmyadmin
 
 sudo mysql -u root -p
@@ -52,26 +52,27 @@ sudo service apache2 reload
 sudo service apache2 restart
 
 sudo phpenmod mbstring
-
+```
 -  give apache the ability to host phpmyadmin application and make it accessible for us
-
+```
 sudo nano /etc/apache2/apache2.conf
 
 Include /etc/phpmyadmin/apache.conf
 
 sudo service apache2 restart
-
+```
 ### Modifying root's password so we can access the website
-
+```
 sudo mysql -u root -p
 
 SELECT user,plugin,host FROM mysql.user WHERE user = 'root';
-
+```
 - you can change the password to any value
+```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123';
 
 SELECT user,plugin,host FROM mysql.user WHERE user = 'root';
 
 FLUSH PRIVILEGES;
-
+```
 - hit CTRL+Z
